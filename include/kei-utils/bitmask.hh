@@ -56,6 +56,10 @@ namespace kei
         using base_type = IntTp;
 
 
+        template <enum_of<base_type> E>
+        constexpr bitmask(E flag = {}) noexcept { set(flag, true); }
+
+
         /// Returns `true` if any bit of `flag` is set. A flag with value `0` always yields `false`.
         ///
         /// ## Parameters
